@@ -5,6 +5,8 @@
 int main()
 {
 
+    int opcount=0;
+
     printf("Enter a number ");
     int num1;
     scanf("%d",&num1);
@@ -64,13 +66,14 @@ int main()
     
     int gcd=1;
 
-    for(int i =0, j=0; i<=p1 && j<=p2 ; )
+    for(int i =0, j=0; i<=p1 && j<=p2 ;)
     {
         if(arr1[i]==arr2[j])
         {
             gcd = gcd * arr1[i];
             i++;
             j++;
+            opcount+=1;
         }
         else if (arr1[i]<arr2[j])
         {
@@ -81,6 +84,7 @@ int main()
     }
 
     printf("\nThe gcd is %d",gcd);
+    printf("\nThe opcount is %d",opcount);
 
 
 
