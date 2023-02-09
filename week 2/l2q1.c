@@ -6,6 +6,8 @@ int main()
 {
     int num1, num2;
 
+    int opcount=0;
+
     printf("Enter num1 ");
     scanf("%d",&num1);
     printf("Enter num2 ");
@@ -16,7 +18,7 @@ int main()
 
     int gcd= 0;
 
-    for(int j = num2 ; j>0 ; j--)
+    for(int j = num2 ; j>0 ; j--,opcount++)
     {
         if(num1 % j ==0)
         {
@@ -29,6 +31,7 @@ int main()
     }
 
     printf("The gcd is %d",gcd);
+    printf("\nThe opcount is %d",opcount);
 
 
 
